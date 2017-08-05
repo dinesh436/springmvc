@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+<div>
+		        <table border="3">
+		            <thead>
+		                <tr>
+		                    <th>DepartmentId</th>
+		                    <th>DepartmentName</th>
+		                    <th>DepartmentHod</th>
+		                </tr>
+		            </thead>
+		            <tbody>
+		                <tr th:each="department : ${departmentList}">
+		                    <td th:text="${department.departmentId}">Id</td>
+		                    <td th:text="${department.departmentName}">Name</td>
+		                    <td th:text="${department.departmentHod}">Hod</td>
+		                </tr>
+		            </tbody>
+		        </table>
+		       </div>  
+		       <br/> 
+		       <br/> 
+		       <br/>     
+      <a href="/LoadDeprtments">Add New Departments</a>
+
+</body>
+</html>
